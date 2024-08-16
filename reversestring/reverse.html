@@ -1,0 +1,27 @@
+<html>
+<head>
+<script type="text/javascript">
+function str_vowel()
+{
+    var str = prompt("Enter the string", " ");
+    for (var i = 0; i < str.length; i++) 
+    {
+        if (str.charAt(i) == 'a' || str.charAt(i) == 'e' || str.charAt(i) == 'i' || str.charAt(i) == 'o' || str.charAt(i) == 'u') 
+        {
+            document.write("The entered string is: " + str + "<br><br>");
+            document.write("The leftmost vowel is: " + str.charAt(i) + "<br><br>");
+            
+            var pos = i + 1;
+            document.write("The position of the leftmost vowel '" + str.charAt(i) + "' is: " + pos + "<br>");
+            return; 
+        }
+    }
+    document.write("The entered string is: " + str + "<br><br>");
+    document.write("The entered string has no vowels");
+}
+</script>
+</head>
+<body style="background-color:blue;" onLoad="str_vowel();">
+<!-- Inline styling not recommended -->
+</body>
+</html>
