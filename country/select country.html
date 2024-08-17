@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>Capitals of Country</title>
+<script language="javascript">
+    function capital() 
+    {
+    var name = document.forms["frm1"].country.value;
+    var capital = "Please select any country";
+            
+    if (name == "India") {capital = "New Delhi";} 
+    else if (name == "China") {capital = "Beijing";} 
+    else if (name == "Pakistan") {capital = "Islamabad"; } 
+    else if (name == "Bangladesh") {capital = "Dhaka";} 
+    else if (name == "Japan") {capital = "Tokyo";}
+    else if (name == "select") {capital = "Please select any country";}
+    
+    document.getElementById("capt").innerHTML = capital;
+    }
+</script>
+</head>
+<body>
+    <form name="frm1">
+        <center>
+            Select a country:
+            <select name="country" onchange="capital()">
+            <option value="select">--Select--</option>
+            <option value="India">India</option>
+            <option value="Pakistan">Pakistan</option>
+            <option value="Bangladesh">Bangladesh</option>
+            <option value="Japan">Japan</option>
+            </select>
+            <br><br>
+            <p id="capt"></p>
+        </center>
+    </form>
+</body>
+</html>
