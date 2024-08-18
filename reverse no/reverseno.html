@@ -1,0 +1,17 @@
+<html>
+<head>
+<title>Reverse a number</title>
+</head>
+<body>
+<h1>Let us reverse the given number:</h1>
+<script>
+function reverseNumber(n) {
+  document.write("Given input is: " + n + "<br>");
+  n = n.toString();
+  return n.split("").reverse().join("");
+}
+
+document.write("Reversed order is: " + reverseNumber(32242));
+</script>
+</body>
+</html>
